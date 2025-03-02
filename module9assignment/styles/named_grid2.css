@@ -1,0 +1,94 @@
+        header {
+            grid-area: header;
+            background-color: Aquamarine;
+        }
+
+        nav {
+            grid-area: nav;
+            background-color: Gainsboro;
+        }
+
+        main {
+            grid-area: main;
+            background-color: FloralWhite;
+
+        }
+		img {max-width:80%; float:none; margin-bottom:5px;}
+
+        aside {
+            grid-area: aside;
+			background-color: AliceBlue;
+
+        }
+		audio {max-width:90%;}
+
+        footer {
+            grid-area: footer;
+            background-color: CadetBlue;
+        }
+		
+		*{text-align: center;}
+
+        .grid-container {
+            display: grid;
+            grid-template-areas:
+                'header header header header header header'
+                'nav nav main main main aside'
+                'nav nav main main main aside'
+                'footer footer footer footer footer footer';
+            grid-gap: .5em;
+			
+			max-width: 62em; /* GIVE CONTAINER A WIDTH AND MARGINS IF YOU DO NOT WANT FULL SCREEN */
+			margin: auto;
+        }
+
+
+        ul li {
+            list-style-type: none;
+        }
+
+
+        /*FIRST BREAK POINT === tablet */
+        @media only screen and (max-width : 900px) {
+            body {
+                background: white;
+            }
+
+            .grid-container {
+                display: grid;
+                grid-template-areas:
+                'header header header header header header'
+                'nav main main main main aside'
+                'nav main main main main aside'
+                'footer footer footer footer footer footer';
+                grid-gap: .4em;
+            }
+
+            ul li {
+                display: inline-block;
+            }
+
+        }
+
+        /*SECOND BREAK POINT === mobile */
+        @media only screen and (max-width : 600px) {
+
+            body {
+                background: white;
+            }
+
+            .grid-container {
+                display: grid;
+                grid-template-areas:
+                'header header header header header header'
+                'nav main main main main aside'
+                'nav main main main main aside'
+                'footer footer footer footer footer footer';
+                grid-gap: .2em;
+            }
+
+            ul li {
+                display: inline-block;
+            }
+
+        }
